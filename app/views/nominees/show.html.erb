@@ -2,8 +2,7 @@
 
 <p>
   <strong>Photo:</strong>
- </p>
- <img src="<%= nominee.photo %>" style="width:75px;height:75px">
+</p>
 
 <p>
   <strong>Name:</strong>
@@ -20,5 +19,5 @@
   <%= @nominee.votes %>
 </p>
 
-<%= link_to 'Edit', edit_nominee_path(@nominee) %> |
+<%= link_to 'Vote', edit_nominee_path(@nominee) %> |
 <%= link_to 'Back', nominees_path %>
