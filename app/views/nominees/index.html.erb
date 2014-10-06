@@ -19,8 +19,7 @@
         <td><%= nominee.name %></td>
         <td><%= nominee.number %></td>
         <td><%= nominee.votes %></td>
-        <td><%= link_to 'Show', nominee %></td>
-        <td><%= link_to 'Edit', edit_nominee_path(nominee) %></td>
+        <td><%= link_to 'Vote', edit_nominee_path(nominee) %></td>
         <td><%= link_to 'Destroy', nominee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>

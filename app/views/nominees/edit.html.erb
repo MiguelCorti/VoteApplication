@@ -1,6 +1,25 @@
 <h1>Editing nominee</h1>
 
-<%= render 'form' %>
+<%= form_for(@nominee) do |f| %>
+  <% if @nominee.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@nominee.errors.count, "error") %> prohibited this nominee from being saved:</h2>
 
-<%= link_to 'Show', @nominee %> |
+      <ul>
+      <% @nominee.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :votes %><br>
+    <%= f.number_field :votes %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
 <%= link_to 'Back', nominees_path %>
