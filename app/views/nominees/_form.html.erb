@@ -1,0 +1,33 @@
+<%= form_for(@nominee) do |f| %>
+  <% if @nominee.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@nominee.errors.count, "error") %> prohibited this nominee from being saved:</h2>
+
+      <ul>
+      <% @nominee.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :photo %><br>
+    <%= f.text_field :photo %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :number %><br>
+    <%= f.number_field :number %>
+  </div>
+  <div class="field">
+    <%= f.label :votes %><br>
+    <%= f.number_field :votes %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

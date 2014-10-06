@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Photo:</strong>
+  <%= @nominee.photo %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @nominee.name %>
+</p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @nominee.number %>
+</p>
+
+<p>
+  <strong>Votes:</strong>
+  <%= @nominee.votes %>
+</p>
+
+<%= link_to 'Edit', edit_nominee_path(@nominee) %> |
+<%= link_to 'Back', nominees_path %>
