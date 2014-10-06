@@ -2,7 +2,7 @@
 
 
 <%= will_paginate %>
-<div class="center row">
+<div class="center hero-unit">
 <table>
   <thead>
     <tr>
@@ -21,7 +21,8 @@
         <td><%= nominee.name %></td>
         <td><%= nominee.number %></td>
         <td><%= nominee.votes %></td>
-        <td><%= link_to 'Vote', edit_nominee_path(nominee) %></td>
+        <td>              <a href=edit_nominee_path(nominee) class="btn btn-large btn-primary">Vote</a> 
+                       </td>
         <td><%= link_to 'Destroy', nominee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
