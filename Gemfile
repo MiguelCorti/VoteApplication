@@ -13,6 +13,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'will_paginate', '~> 3.0'
 gem 'bootstrap-will_paginate', '0.0.9'
+gem 'bootstrap-sass', '2.3.2.0'
 
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
